@@ -1,0 +1,85 @@
+header img {
+    height: 60px;
+    width:300px;
+    margin-left: 0px;
+}
+body {
+    background-color: #f6f6f6;
+    background-size: cover;
+    font-family: sans-serif;
+    margin-top: 80px;
+    padding: 30px;
+}
+.right{
+    margin-left: 150px;
+}
+header {
+    background-color: #00a9f4;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 5;
+    color: white;
+    text-decoration: none;
+}
+nav{
+  margin-left: 120px;
+}
+.btn1{
+    width: 120px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ff0066;
+    height:50px;
+    text-align: center;
+    line-height: 40px;
+}
+.btn1:hover{
+    background-color: #33adff;
+    box-shadow: 1px 3px grey;
+}
+
+.buttons {
+	visibility: hidden;
+}
+
+.rightbtn{
+    position: fixed;
+    left: 1050px;
+    width: 150px;
+    height: 50px;
+    background-color: #0099ff;
+}
+.leftbtn{
+    position: relative;
+    margin-top: 10px;
+    padding: 0;
+    width: 150px;
+    height: 40px;
+
+}
+.leftbtn:hover{
+    box-shadow: 1px 3px grey;
+}

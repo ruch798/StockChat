@@ -1,0 +1,10 @@
+.mycard{
+	background-color: white;
+	padding: 10px;
+	text-align: center;
+	border:solid 1px grey;
+}
+img{
+	height: 150px;
+	width: 150px;
+}

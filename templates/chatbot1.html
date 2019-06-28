@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigation bar DEMO</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+			main {
+				color: white;
+			}
+			.homecard{
+				z-index: -1;
+				position: relative;
+				margin-bottom: 30px;
+				top: 30px;
+				left: 350px;
+				width: 600px;
+				height:500px;
+				overflow-y:scroll; 
+				position:relative;
+				color: black;
+				background-color: white;
+				padding: 15px;
+				border: solid 1px #e1d2d2;
+			}
+			.bot{
+				position: relative;
+				background-color:  #ecd8df;
+				text-align: left;
+				max-width: 350px;
+				width: auto;
+				height: auto;
+				color: black;
+				padding: 10px;
+				padding-top: 15px;
+				padding-left: 25px;
+				border-radius: 50px;
+				display:flex;
+				justify-content: space-around;
+			}
+			.user{
+				position: relative;
+				background-color: #5ca6fa;
+				text-align: right;
+				margin-left: 250px;
+				max-width: 350px;
+				width: auto;
+				height: auto;
+				color: white;
+				padding: 10px;
+				padding-top: 15px;
+				padding-right: 25px;
+				border-radius: 50px;
+				display:flex;
+				justify-content: space-around;
+			}
+			.yes{
+				position: relative;
+				left: 500px;
+				width: 120px;
+				font-family: sans-serif;
+				font-size: 15px;
+				border: none;
+				border-radius: 10px;
+				background-color: #ff0066;
+				height:50px;
+				text-align: center;
+				line-height: 40px;
+			}
+			.no{
+				position: relative;
+				left: 600px;
+				width: 120px;
+				font-family: sans-serif;
+				font-size: 15px;
+				border: none;
+				border-radius: 10px;
+				background-color: #ff0066;
+				height:50px;
+				text-align: center;
+				line-height: 40px;
+			}
+			.question{
+				width:400px;
+				background-color: #ecd8df;
+				border: solid 1px #e2d3d3;
+				border-radius: 10px;
+				padding: 8px;
+				text-align: center;
+				margin-bottom: 8px;
+			}
+			
+			header img {
+			height: 60px;
+			width:300px;
+			margin-left: 0px;
+		}
+		body {
+			background-color: #f6f6f6;
+			background-size: cover;
+			font-family: sans-serif;
+			margin-top: 80px;
+			padding: 30px;
+		}
+		.right{
+			margin-left: 150px;
+		}
+		header {
+			background-color: #00a9f4;
+			color: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			box-shadow: 0 0 25px 0 black;
+		}
+
+		header * {
+			display: inline;
+		}
+
+		header li {
+			margin: 20px;
+		}
+
+		header li a {
+			list-style: none;
+			text-decoration: none;
+			font-size: 17px;
+			font-weight: 5;
+			color: white;
+			text-decoration: none;
+		}
+		nav{
+		  margin-left: 120px;
+		}
+		.btn1{
+			width: 120px;
+			font-family: sans-serif;
+			font-size: 15px;
+			border: none;
+			border-radius: 50px;
+			background-color: #ff0066;
+			height:50px;
+			text-align: center;
+			line-height: 40px;
+		}
+		.btn1:hover{
+			background-color: #33adff;
+			box-shadow: 1px 3px grey;
+		}
+
+		.buttons {
+			visibility: hidden;
+		}
+
+		.rightbtn{
+			position: fixed;
+			left: 1050px;
+			width: 150px;
+			height: 50px;
+			background-color: #0099ff;
+		}
+		.leftbtn{
+			position: relative;
+			margin-top: 10px;
+			padding: 0;
+			width: 150px;
+			height: 40px;
+
+		}
+		.leftbtn:hover{
+			box-shadow: 1px 3px grey;
+		}
+
+				
+		</style>
+        <script>
+		
+			var company_name=["TCS","SBI","INFY","ITC","RELI"];
+			var state=-1;
+			var state1="";
+			var g="";
+		
+			function newchat() {
+				if(confirm("Are you sure")){
+					window.location.reload();
+				}else{
+					alert("hi");
+				}
+			}
+			
+			/*
+			function chat(val) {
+				var answer=val; 
+				var txt1 = "<p class='user'>"+val+"</p>";        // Create text with HTML
+				$("#homecard").append(txt1);   // Append new elements
+				var div='<div class="card question">sijabpv</div></div>'
+				var question = div;        // Create text with HTML
+				$("#homecard").append(question);   // Append new elements
+			  var elem = document.getElementById('homecard');
+			  elem.scrollTop = elem.scrollHeight;
+			}
+			*/
+			
+			function chat(val,who) {
+				if(who=="human") {
+					var answer=val; 
+					var txt1 = "<p class='user'>"+val+"</p>";        // Create text with HTML
+					$("#homecard").append(txt1);   // Append new elements
+				}
+				else {
+					var div='<div class="card question">'+val+'</div></div>'
+					var question = div;        // Create text with HTML
+					$("#homecard").append(question);   // Append new elements
+				}
+				
+				var elem = document.getElementById('homecard');
+				elem.scrollTop = elem.scrollHeight;
+			
+			}
+			
+			
+			function doo1(val) {
+				console.log(val);
+			}
+			
+			function doo2() {
+				console.log(g);
+				doo(g);
+			}
+			function create_button(arr) {
+				
+				var line="";
+				for(var i=0;i<arr.length;i++) {
+					//line+="<button id="+arr[i].toLowerCase()+"onclick='doo1("+this.id+")'"+"+>"+arr[i]+"</button>";
+					/*
+					var element = document.createElement("input");
+					//Assign different attributes to the element. 
+					element.setAttribute("type", "submit");
+					element.setAttribute("value", arr[i]);
+					element.setAttribute("name", arr[i]);
+					element.onclick = function() { // Note this is a function
+						doo1(arr[i]);
+					};
+					*/
+					
+					var btn = document.createElement("BUTTON");
+					var t = document.createTextNode(arr[i]);
+
+					btn.setAttribute("style","color:red;font-size:23px");
+
+					btn.appendChild(t);
+					
+					g=arr[i];
+
+					btn.onclick = function () {
+						
+					  doo(this.child);
+					}
+									
+					var foo = document.getElementById("buttons");
+					//Append the element in page (in span).  
+					foo.appendChild(btn);
+					$("#buttons").append("<p id="+arr[i]+"></p>");   // Append new elements
+					}
+					//line+="<br>";
+					//$("#homecard").append(line);   // Append new elements
+				
+				
+
+				
+				
+					var elem = document.getElementById('homecard');
+					elem.scrollTop = elem.scrollHeight;
+			}
+			
+			
+			function doo(val) {
+				console.log(val+" "+state);
+				if(state==-1) {
+					if(val=="login") {
+						chat("Enter Username","computer");
+						state1="login";
+					}
+					else if(val=="signup") {
+					
+					}
+					else {
+						if(state1=="login") {
+							chat("Enter Username and Password","computer");
+							state1="login";
+							chat("Enter Username and Password","computer");
+							state1="login";
+						}
+					}
+				}
+				else if(val=="ok" && state==0) {
+						var name=document.getElementById("textbox").value;
+						var flag=0;
+						for(var i=0;i<company_name.length;i++) {
+							if(company_name[i]==name.toUpperCase()) {
+								flag=1;
+								break;
+							}
+						}
+						if(flag==0) {
+							chat("Enter valid company name","computer");
+						}
+						else {
+							chat(name.toUpperCase(),"human");
+							chat("Select an option","computer");
+							//create_button(["Buy","Sell"]);
+							document.getElementById("buttons").style.visibility="visible";
+							state=1;
+						}
+				}
+				else if(state==1) {
+					console.log(val);
+					if(val.toUpperCase()=="BUY") {
+						chat("Buy","human");
+						chat("You should buy","computer");
+						document.getElementById("buttons").style.visibility="hidden";
+						chat("Your query has been answered","computer");
+						document.getElementById("textbox").value="";
+						document.getElementById("textbox").style.visibility="hidden";
+					}
+					else if(val.toUpperCase()=="SELL") {
+						chat("Sell","human");
+						chat("Enter price at which you bought","computer");
+						document.getElementById("textbox").value="";
+					}
+					else {
+						var x=parseInt(document.getElementById("textbox").value);
+						chat(document.getElementById("textbox").value,"human");
+						chat("You can sell now","computer");
+						document.getElementById("buttons").style.visibility="hidden";
+						chat("Your query has been answered","computer");
+						document.getElementById("textbox").value="";
+						document.getElementById("textbox").style.visibility="hidden";
+					}
+				
+				}
+			
+			} 
+			
+			
+		function pilot() {
+			$.getJSON('http://localhost:5000/webservice?param1=123', 
+				function(data,textStatus,jqXHR) {
+					document.getElementById("homecard").innerHTML+="<img src={{url_for('static',filename='img.png')}}>";
+				}
+			
+			)
+		}
+
+		</script>
+    </head>
+    <body>
+        <header>
+           
+            <nav>
+                <ul>
+                   <li><a href="home.html"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                   <li><a href="chatbot.html"><i class="glyphicon glyphicon-new-window"></i> New Chat</a></li>       
+                </ul>
+            </nav>
+        </header>
+
+
+        <main class="">
+            <a href="#" onclick="newchat()" class="btn btn-primary btn1 rightbtn">Start a new Chat <i class="glyphicon glyphicon-plus"></i> </a>
+<div class="chatcontainer">
+
+             <div class="homecard" id="homecard">
+                    <p class="bot">Hey there!</p>
+					<p class="bot">Enter company name!!!</p>
+					
+              
+            </div>
+            <br>
+</div>
+
+
+			<div class="reg" id="reg">
+				<button style="margin-left:350px;color:white" id="login" onclick="doo('login')" class="btn btn-primary">Login</button>
+				<button id="signup" onclick="doo('signup')" style='margin-left:15px;color:white' class="btn btn-primary">SignUp</button>
+			</div>
+			
+			<div class="buttons" id="buttons">
+				<button style="margin-left:350px;color:white" id="buy" onclick="doo('Buy')" class="btn btn-primary">Buy</button>
+				<button id="sell" onclick="doo('Sell')" style='margin-left:15px;color:white' class="btn btn-primary">Sell</button>
+			</div>
+			
+			<br>
+				<input style="margin-left:350px;color:black;" placeholder="Enter text here" type="text" id="textbox" name="textview">
+				
+				
+                <button style="margin-left:50px;" id="no" onclick="doo('ok')" name="ans" value="no" class="btn btn-success">ok</button>
+            <br><br>
+        </main>
+    </body>
+</html>

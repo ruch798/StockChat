@@ -1,0 +1,46 @@
+.forum{
+	overflow: scroll;
+	height: 380px;
+	margin-bottom: 20px;
+}
+.ask{
+	background-color: white;
+	padding: 15px;
+	height: 100px;
+	margin-bottom: 15px;
+	border-radius: 20px;
+	width: 95%;
+}
+.ask img{
+	position: relative;
+	width: auto;
+	height: auto;
+	margin-right:30px;
+	margin-left:20px;
+}
+.ask p{
+	width: auto;
+	float: left;
+}
+.ask h4{
+	position: relative;
+	padding-left: 20px;
+
+}
+.ask h5{
+	position: relative;
+	padding-left: 20px;
+}
+input{
+	border: solid 1px grey;
+	width: 80%;
+	height: 40px;
+	font-size: 22px;
+	padding: 5px;
+}
+button{
+	width: 18%;
+	position: relative;
+	top: -5px;
+	height: 40px;
+}

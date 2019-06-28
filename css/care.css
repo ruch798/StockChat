@@ -1,0 +1,10 @@
+main li{
+	list-style: none;
+	background-color: white;
+	padding: 10px;
+	border-bottom: solid 1px #f0e4e4;
+}
+main a{
+	font-size: 25px;
+	padding: 20px;
+}
