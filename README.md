@@ -6,4 +6,4 @@
 ![](images/5.PNG)
 ![](images/6.PNG)
 
-Developed by Atharva Gole, Ruchi Bhatia and Jasdeep Singh Grover
+**Developed by Atharva Gole, Ruchi Bhatia and Jasdeep Singh Grover**
